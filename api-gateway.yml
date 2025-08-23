@@ -27,7 +27,7 @@ spring:
             - Path=/api/hotels/**
 
         - id: rating-service
-          uri: lb://rating-service
+          uri: lb://review-service
           predicates:
             - Path=/api/ratings/**
             
