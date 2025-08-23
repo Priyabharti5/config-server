@@ -19,17 +19,17 @@ spring:
         - id: user-service
           uri: lb://user-service
           predicates:
-            - Path=/users/**
+            - Path=/api/users/**
 
         - id: hotel-service
           uri: lb://hotel-service
           predicates:
-            - Path=/hotels/**
+            - Path=/api/hotels/**
 
         - id: rating-service
           uri: lb://rating-service
           predicates:
-            - Path=/ratings/**
+            - Path=/api/ratings/**
             
 eureka:
   client:
