@@ -10,28 +10,27 @@ spring:
 
   cloud:
     gateway:
-      server:
-        webflux:
-          discovery:
-            locator:
-              enabled: true
-              lower-case-service-id: true
-          routes:
-            - id: user-service
-              uri: lb://user-service
-              predicates:
-                - Path=/users/**
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
 
-            - id: hotel-service
-              uri: lb://hotel-service
-              predicates:
-                - Path=/hotels/**
+      routes:
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/users/**
 
-            - id: rating-service
-              uri: lb://rating-service
-              predicates:
-                - Path=/ratings/**
+        - id: hotel-service
+          uri: lb://hotel-service
+          predicates:
+            - Path=/hotels/**
 
+        - id: rating-service
+          uri: lb://rating-service
+          predicates:
+            - Path=/ratings/**
+            
 eureka:
   client:
     service-url:
