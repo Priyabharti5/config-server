@@ -29,7 +29,7 @@ spring:
         - id: rating-service
           uri: lb://review-service
           predicates:
-            - Path=/api/ratings/**
+            - Path=/api/reviews/**
             
 eureka:
   client:
