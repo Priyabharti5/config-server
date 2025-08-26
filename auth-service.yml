@@ -1,10 +1,6 @@
 server:
   port: 8084
 
-auth:
-  jwt-secret: "qR7L2MZ3UuHhKxk6eZ4Lq9pE1D5c0S7p3WlQ8hYjR5tT2aXyZsWmErBvCqDpGfJx"   # dev only: keep in config-server
-  jwt-expiration-ms: 3600000
-
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/auth_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
